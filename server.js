@@ -24,7 +24,7 @@ app.use(cors());
 
 app.get('/', (req, res)=> {
 
-    res.send(database.users);
+    res.send("it works! bet you didnt expect that one");
 
 })
 
