@@ -6,11 +6,9 @@ import  bcrypt  from 'bcryptjs';
 const postgres = knex({
     client: 'pg',
     connection: {
-      host : 'postgresql-lively-05548',
-      port : 5432,
-      user : 'jake',
-      password : 'password',
-      database : 'smart-brain'
+      host : process.env.DATABASE_URL,
+      ssl: true,
+
     }
   });
 
