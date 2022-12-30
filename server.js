@@ -6,7 +6,7 @@ import  bcrypt  from 'bcryptjs';
 const postgres = knex({
     client: 'pg',
     connection: {
-      host : '127.0.0.1',
+      host : 'postgresql-lively-05548',
       port : 5432,
       user : 'jake',
       password : 'password',
