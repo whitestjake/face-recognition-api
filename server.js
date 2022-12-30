@@ -12,7 +12,7 @@ const postgres = knex({
       }},
 
     }
-  });
+  );
 
 
 const app = express ();
