@@ -1,5 +1,5 @@
 import express from 'express';
-//import cors from "cors";
+import cors from "cors";
 import knex from 'knex';
 import  bcrypt  from 'bcryptjs';
 
@@ -18,7 +18,7 @@ const postgres = knex({
 const app = express ();
 
 app.use(express.json());
-//app.use(cors());
+app.use(cors());
 
 
 
