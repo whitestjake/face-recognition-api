@@ -52,6 +52,7 @@ app.post('/register', (req, res) => {
     if (!email || !name || !password){
         return res.status(400).json('incorrect form submission')
     }
+    console.log('hello')
     const hash = bcrypt.hashSync(password)
     postgres.transaction(trx => {
         trx.insert({
