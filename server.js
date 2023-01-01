@@ -56,7 +56,7 @@ app.post('/register', (req, res) => {
     }
     const hash = bcrypt.hashSync(password)
     postgres.transaction(trx => {
-        trx.insert({
+        return trx.insert({
             hash: hash,
             email: email
         })
