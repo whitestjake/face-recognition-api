@@ -55,7 +55,7 @@ app.post('/register', (req, res) => {
             hash: hash,
             email: email
         })
-        .into("login").then(console.log(trx))
+        .into("login").then(console.log('error here', trx))
         .returning("email")
         .then(loginEmail => {
             return trx("users")
