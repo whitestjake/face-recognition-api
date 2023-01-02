@@ -16,6 +16,7 @@ const postgres = knex({
 const app = express ();
 
 app.use(express.json());
+app.use(cors());
 
 app.get('/', (req, res)=> {
 
@@ -102,9 +103,6 @@ app.put('/image', (req, res) => {
     })
     .catch(err => res.status(400).json("unable to get entries"))
 })
-
-app.use(cors());
-
 
 app.listen(process.env.PORT || 3690, ()=> {
 
