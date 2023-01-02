@@ -17,6 +17,9 @@ const app = express ();
 
 app.use(express.json());
 app.use(cors());
+app.use((req, res) => {
+    res.header("Access-Control-Allow-Origin", "*")
+});
 
 app.get('/', (req, res)=> {
 
