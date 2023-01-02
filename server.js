@@ -25,6 +25,7 @@ app.get('/', (req, res)=> {
 
 app.post('/signin', (req, res) => {
     postgres.select("hash", "email").from("login")
+        .then(console.log(req.body.email))
         .where('email', '=', req.body.email)
         .then(data => {
             const isValid = bcrypt.compareSync(req.body.password, data[0].hash)
