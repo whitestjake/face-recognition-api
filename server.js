@@ -26,7 +26,7 @@ app.get('/', (req, res)=> {
 
     res.send("it works! bet you didnt expect that one");
 
-})
+});
 
 app.post('/signin', (req, res) => {
     postgres.select("hash", "email").from("login")
@@ -45,7 +45,7 @@ app.post('/signin', (req, res) => {
             }
         })
         .catch(err => res.status(400).json('Invalid Form Submission'))
-})
+});
 
 app.post('/register', (req, res) => {
     const { email, name, password } = req.body;
