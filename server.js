@@ -18,6 +18,7 @@ const app = express ();
 
 app.use(express.json());
 app.use(cors());
+app.connect();
 
 app.get('/', (req, res)=> {
 
