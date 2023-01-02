@@ -57,7 +57,6 @@ app.post('/register', (req, res) => {
         })
         .into("login")
         .returning("email")
-        .then(console.log(hash, email))
         .then(loginEmail => {
             return trx("users")
                 .returning("*")
