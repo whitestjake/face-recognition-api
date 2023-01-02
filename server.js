@@ -17,8 +17,14 @@ const postgres = knex({
 
 const app = express ();
 
+app.corsOptions = {
+    origin:  "http://localhost:3000/",
+    optionsSuccessStatus: 200
+}
+
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
+
 
 
 
