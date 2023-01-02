@@ -55,11 +55,11 @@ app.post('/register', (req, res) => {
             hash: hash,
             email: email
         })
-        .into('login')
-        .returning('email')
+        .into("login")
+        .returning("email")
         .then(loginEmail => {
-            return trx('users')
-                .returning('*')
+            return trx("users")
+                .returning("*")
                 .insert({
                     email: loginEmail[0].email,
                     name: name,
