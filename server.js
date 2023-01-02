@@ -43,8 +43,10 @@ app.post('/signin', (req, res) => {
 });
 
 app.post('/register', (req, res) => {
-    console.log(name, email, password)
+    
     const { email, name, password } = req.body;
+    
+    console.log(name, email, password)
     
     if (!email || !name || !password){
         return res.status(400).json(`incorrect form submission`)
