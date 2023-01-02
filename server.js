@@ -49,7 +49,7 @@ app.post('/register', (req, res) => {
     }
     console.log(name, email, password)
     const hash = bcrypt.hashSync(password)
-    console.log(hash)
+    
     postgres.transaction(trx => {
         trx.insert({
             hash: hash,
