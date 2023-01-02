@@ -57,6 +57,7 @@ app.post('/register', (req, res) => {
 
     postgres
     .insert(loginQuery)
+    .then(res => console.log(res))
     .catch(err => res.status(400).json("unable to insert into login"))
 
     // postgres.transaction(trx => {
