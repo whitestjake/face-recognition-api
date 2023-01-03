@@ -63,7 +63,7 @@ app.post('/register', (req, res) => {
         .returning("email")
         .then(loginEmail => {
             console.log(loginEmail)
-            return trx("users")
+            trx("users")
                 .returning("*")
                 .insert({
                     email: loginEmail[0].email,
