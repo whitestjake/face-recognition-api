@@ -64,11 +64,12 @@ app.post('/register', (req, res) => {
         .then(loginEmail => {
             console.log(loginEmail)
             return trx("users")
-                //.returning("*")
+                .returning("*")
                 .insert({
                     email: loginEmail[0].email,
                     name: name,
-                    joined: new Date()
+                    joined: new Date(),
+                    hash: hash
                 })
                 .then(user => {
                     res.json(user[0]);
