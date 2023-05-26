@@ -1,7 +1,9 @@
 # face-recognition-api
 backend server for face recognition app
 
-https://whitestjake-smartbrain.herokuapp.com/
+live at https://whitestjake-smartbrain.herokuapp.com/
+
+(only reads image files, so if you are googling a photo make sure you copy the image link)
 
 1. clone this repo
 2. run npm install
